@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourab Chakma | Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      
+        :root {
+            --dark-bg: #222;
+            --body-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --highlight-color: #007bff;
+            --light-bg-main: #F0F8FF;
+            --dark-text-on-light: #333;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--body-bg);
+            color: var(--dark-text-on-light);
+            line-height: 1.6;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1, h2, h3 { color: var(--dark-text-on-light); }
+        a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* Header */
+        .main-header {
+            background-color: var(--dark-bg);
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .navbar {
+            display: flex;
+      
+            justify-content: center; 
+            align-items: center; 
+            height: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-right-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            align-items: center;
+        }
+
+        .nav-links li a {
+            padding: 0 15px; 
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            height: 100%; 
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li a:hover {
+            color: var(--highlight-color);
+        }
+        
+        /* Scrollable Content */
+        .scrollable-content-area {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+            background-color: var(--light-bg-main);
+        }
+
+        .hero-section-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            min-height: calc(100% - 40px);
+            background-color: #ffffff;
+            padding: 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .hero-section {
+            padding: 60px 20px;
+            padding-top: 100px;
+            color: var(--dark-text-on-light);
+        }
+
+        .name-tag {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--highlight-color);
+            color: var(--text-color);
+            padding: 8px 25px;
+            border-radius: 25px;
+        }
+
+  
+        .social-links {
+            grid-column: 1 / 3;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            padding-top: 30px;
+            justify-content: center;
+        }
+        .social-links a {
+            background-color: #e8f1ff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #0077b5;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            box-shadow: none;
+        }
+        .social-links a:hover {
+            background: linear-gradient(135deg, #0077b5, #005f99);
+            color: #ffffff;
+            text-decoration: none;
+            transform: translateY(-3px);
+        }
+        .social-links i { margin-right: 5px; }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Profile Image Section */
+        .profile-image {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: none;
+        }
+
+        .profile-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image img:hover { transform: none; }
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            flex-shrink: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+        }
+        .main-footer a { color: var(--highlight-color); }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="nav-right-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skills.html">Skills/Experience</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="education.html">Education & Achievements</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="scrollable-content-area" id="scrollArea">
+            <div class="hero-section-container">
+                <div class="name-tag">Sourab Chakma</div>
+
+                <section id="home" class="hero-section">
+                    <div class="social-links">
+                        <a href="https://github.com/sourab337" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/sourab-chakma-b78152263/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" target="_blank"><i class="fab fa-kaggle"></i> Kaggle</a>
+                        <a href="Your_CV_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV/Resume</a>
+                        <a href="#" target="_blank"><i class="fas fa-certificate"></i> IELTS</a>
+                    </div>
+
+                    <div class="content-container">
+                        <div class="intro-box">
+                            <h1> I'm Sourab Chakma</h1>
+                            <p> 
+                                I am interested in mobile apps development, NLP, Machine Learning, and Social Computing.
+                                 Passionate about solving complex problems, exploring AI technologies, and contributing to innovative research.
+
+                                
+                            </p>
+
+                            <h3>Research Interests: </h3> 
+                               <p>
+                                NLP/Computational Linguistics
+                               </p>
+                               <p>
+                                Social Computing
+                               </p>
+                            
+                            
+                            </div>
+
+                        <div class="right-panel">
+                            <div class="profile-image">
+                                <img src="me.jpg" alt="Sourab Chakma">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Sourab Chakma. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const scrollArea = document.getElementById('scrollArea');
+        const body = document.body;
+
+        scrollArea.addEventListener('scroll', () => {
+            if (scrollArea.scrollTop > 50) {
+                body.style.backgroundColor = '#161616';
+            } else {
+                body.style.backgroundColor = '#1a1a1a';
+            }
+        });
+    </script>
+
+</body>
+</html>
