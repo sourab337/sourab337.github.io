@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Education — Sourab Chakma</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="scrollable-content-area">
+    <div class="container">
+      <section class="section">
+        <h1>Education</h1>
+        <div class="two-col">
+          <div>
+            <h3>B.Sc. in Computer Science</h3>
+            <p style="font-size: 1.05rem; font-weight: 700;"><strong>Mawlana Bhashani Science & Technology University</strong></p>
+            <p>Relevant coursework: Algorithms, NLP, Machine Learning, Databases</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="main-footer">&copy; 2026 Sourab Chakma</footer>
+
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const href = link.getAttribute('href');
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      if (href === currentPage || (href === 'index.html' && currentPage === '')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

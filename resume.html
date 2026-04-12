@@ -2,91 +2,161 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Sourab Chakma - Resume</title>
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            color: #333;
-            line-height: 1.6;
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
         }
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .header h1 {
-            font-size: 32px;
-            margin: 0;
-        }
-        h2 {
-            font-size: 20px;
-            color: #555;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 25px;
-        }
-        .contact {
-            margin-top: 5px;
-            font-size: 14px;
-            color: #555;
-        }
-        .contact a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .section {
-            margin-bottom: 15px;
-        }
-        .project-title {
-            font-weight: bold;
-        }
-        .skills span {
+        
+        .name-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
             display: inline-block;
-            margin-right: 10px;
-            background-color: #f0f0f0;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
+            animation: slideIn 0.6s ease;
+        }
+        
+        .resume-header {
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            padding: 48px !important;
+            border-radius: 16px !important;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.08) !important;
+            border: 1px solid rgba(0, 102, 204, 0.05) !important;
+            margin-bottom: 32px !important;
+            animation: slideIn 0.6s ease;
+        }
+
+        .resume-header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 12px 36px rgba(0, 102, 204, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .resume-header > div {
+            flex: 1;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            color: var(--text);
+            letter-spacing: -0.5px;
+        }
+
+        .native-name {
+            font-size: 1.2rem;
+            color: #666;
+            margin: 4px 0 16px 0;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .degree-title {
+            font-size: 1rem;
+            color: var(--primary);
+            margin: 12px 0 6px 0;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .institution {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin: 0 0 16px 0;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(0, 102, 204, 0.1);
+            padding-top: 16px;
+        }
+
+        .contact a {
+            color: var(--primary);
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .contact a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .resume-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 32px !important;
+            }
+
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+
+            .resume-header img {
+                width: 140px;
+                height: 140px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header with photo -->
-    <div class="header">
-        <img src="me.jpg" alt="Sourab Chakma">
-        <div>
-            <h1>Sourab Chakma</h1>
-            <div class="contact">
-                Email: <a href="mailto:sourabchakma337@gmail.com">sourabchakma337@gmail.com</a> | 
-                Phone: +8801518429337| 
-                LinkedIn: <a href="https://linkedin.com/in/sourab" target="_blank">linkedin.com/in/sourab</a> | 
-                GitHub: <a href="https://github.com/sourab337" target="_blank">github.com/sourabchakma</a>
+    <div class="resume-container">
+        <div class="name-badge">SOURAB CHAKMA • B.SC(ENGG)</div>
+        <div class="resume-header">
+            <img src="me.jpg" alt="Sourab Chakma">
+            <div>
+                <h1>Sourab Chakma</h1>
+                <p class="native-name">ସୋରାବ୍ ଚକ୍ରମା</p>
+                <p class="degree-title">B.Sc(Engg) in Computer Science and Engineering</p>
+                <p class="institution"><strong>Mawlana Bhashani Science & Technology University</strong></p>
+                <div class="contact">
+                    <a href="mailto:sourabchakma337@gmail.com">sourabchakma337@gmail.com</a>
+                    <span>•</span>
+                    <a href="tel:+8801518429337">+88 015 1842 9337</a>
+                    <span>•</span>
+                    <a href="https://github.com/sourab337" target="_blank">github.com/sourab337</a>
+                </div>
             </div>
         </div>
-    </div>
 
     <!-- Summary -->
     <div class="section">
         <h2>Summary</h2>
-        <p>  Computer Science student interested in Natural Language Processing (NLP), Machine Learning, and App Development. </p>
+        <p>
+            I'm Sourab Chakma, an undergraduate student in computer science and engineering at Mawlana Bhasani Science and Technology University. My research area is interdisciplinary AI, low-resource language technology, NLP, and networking. Using technology to solve real-life problems is my passion. 
+        </p>
+        <p>
+            Along with my academic studies, I have always wanted to contribute to the growth of my community. I am deeply passionate about working in education, culture, language, etc.
+        </p>
+        <p>
+            As a CS student, I am deeply interested in higher studies.
+        </p>
     </div>
 
     <!-- Education -->
@@ -122,8 +192,6 @@
             </li>
         </ul>
     </div>
-
-   
 
 </body>
 </html>

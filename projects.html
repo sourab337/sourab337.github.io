@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Sourab Chakma</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="scrollable-content-area">
+    <div class="container">
+      <section class="section">
+        <h1>Selected Projects</h1>
+        <div class="project">
+          <h3>Chakma ↔ Bangla Dictionary App</h3>
+          <p>Desktop JavaFX app with MySQL backend, search and CRUD features.</p>
+        </div>
+
+        <div class="project" style="margin-top:12px">
+          <h3>Personal Portfolio Website</h3>
+          <p>Responsive site to showcase projects, resume and contact information.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">&copy; 2026 Sourab Chakma</footer>
+
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const href = link.getAttribute('href');
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      if (href === currentPage || (href === 'index.html' && currentPage === '')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
