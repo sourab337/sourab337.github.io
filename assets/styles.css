@@ -357,7 +357,14 @@ a:hover { color: var(--secondary); }
     display: flex;
     gap: 12px;
     margin-top: 24px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro-box .social-links {
+    margin-top: 12px;
+    margin-bottom: 16px;
 }
 
 .social-links a {
