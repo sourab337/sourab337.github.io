@@ -228,7 +228,7 @@ a:hover { color: var(--secondary); }
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
     align-items: center;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
     animation: slideIn 0.6s ease;
@@ -330,11 +330,12 @@ a:hover { color: var(--secondary); }
     text-align: center;
     animation: float 3s ease-in-out infinite;
     position: relative;
+    margin-top: -30px;
 }
 
 .profile-image img {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid white;
@@ -370,16 +371,17 @@ a:hover { color: var(--secondary); }
 .social-links a {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(224, 242, 255, 0.8));
     color: var(--primary);
-    padding: 10px 16px;
-    border-radius: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     border: 1px solid rgba(0, 102, 204, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 24px rgba(0, 102, 204, 0.1), 0 0 1px rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
 }
 
 .social-links a:hover {
@@ -731,13 +733,13 @@ a:hover { color: var(--secondary); }
         display: flex;
         flex-direction: column;
         padding: 16px;
-        gap: 16px;
+        gap: 8px;
         border-radius: 12px;
     }
 
     .profile-image img {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
     }
 
     h1 { 
@@ -919,13 +921,13 @@ a:hover { color: var(--secondary); }
         display: flex;
         flex-direction: column;
         padding: 28px;
-        gap: 24px;
+        gap: 8px;
         border-radius: 16px;
     }
 
     .profile-image img {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
     }
 
     h1 { 
@@ -1068,12 +1070,12 @@ a:hover { color: var(--secondary); }
 
     .hero {
         padding: 40px;
-        gap: 16px;
+        gap: 8px;
     }
 
     .profile-image img {
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
     }
 
     h1 { 
@@ -1178,7 +1180,7 @@ a:hover { color: var(--secondary); }
 
     .hero {
         padding: 60px;
-        gap: 20px;
+        gap: 8px;
     }
 
     h1 { 
@@ -1256,7 +1258,7 @@ a:hover { color: var(--secondary); }
 
     .hero {
         padding: 60px;
-        gap: 20px;
+        gap: 8px;
     }
 
     h1 { 
