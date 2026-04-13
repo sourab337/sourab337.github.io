@@ -276,7 +276,6 @@ a:hover { color: var(--secondary); }
 }
 
 .intro-box {
-    text-align: center;
 }
 
 .intro-box h1 {
@@ -287,6 +286,12 @@ a:hover { color: var(--secondary); }
     font-family: 'Merriweather', serif;
     font-weight: 700;
     letter-spacing: -1px;
+    text-align: center;
+}
+
+.intro-box h1 + p,
+.intro-box h1 + p + p {
+    text-align: center;
 }
 
 .intro-box p {
