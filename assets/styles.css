@@ -276,6 +276,7 @@ a:hover { color: var(--secondary); }
 }
 
 .intro-box {
+    text-align: center;
 }
 
 .intro-box h1 {
