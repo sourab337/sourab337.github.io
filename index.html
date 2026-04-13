@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourab Chakma | Software Engineer Portfolio</title>
+    <title>Sourab Chakma | Student Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -11,7 +11,12 @@
     <div class="page-wrapper">
         <header class="main-header">
             <nav class="navbar">
-                <ul class="nav-links">
+                <button class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Skills.html">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -30,15 +35,15 @@
                             <h1>Sourab Chakma</h1>
                             <p style="margin: 8px 0 16px 0; color: var(--primary); font-weight: 600; font-size: 1.1rem;">B.Sc(Engg) in Computer Science and Engineering</p>
                             <p style="margin: 0 0 24px 0; color: var(--text-light); font-size: 1.05rem; font-weight: 700;"><strong>Mawlana Bhashani Science & Technology University</strong></p>
-                            <p>
-                                I'm Sourab Chakma, an undergraduate student in computer science and engineering at Mawlana Bhasani Science and Technology University. My research area is interdisciplinary AI, low-resource language technology, NLP, and networking. Using technology to solve real-life problems is my passion. 
+                            <p style="margin: 0 0 16px 0; color: var(--text-light); line-height: 1.8; font-size: 1rem;">
+                                I'm Sourab Chakma, an undergraduate student in computer science and engineering at Mawlana Bhasani Science and Technology University. My research interest area is interdisciplinary AI, low-resource language technology, NLP, and networking. Using technology to solve real-life problems is my passion. 
                             </p>
 
-                            <p>
+                            <p style="margin: 0 0 16px 0; color: var(--text-light); line-height: 1.8; font-size: 1rem;">
                                 Along with my academic studies, I have always wanted to contribute to the growth of my community. I am deeply passionate about working in education, culture, language, etc.
                             </p>
 
-                            <p>
+                            <p style="margin: 0 0 24px 0; color: var(--text-light); line-height: 1.8; font-size: 1rem;">
                                 As a CS student, I am deeply interested in higher studies.
                             </p>
 
@@ -71,6 +76,25 @@
     </div>
 
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+        
         // Highlight current page in navigation
         document.querySelectorAll('.nav-links a').forEach(link => {
             const href = link.getAttribute('href');

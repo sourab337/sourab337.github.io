@@ -10,7 +10,12 @@
 <body>
   <header class="main-header">
     <nav class="navbar">
-      <ul class="nav-links">
+      <button class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="Skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -24,7 +29,7 @@
   <main class="scrollable-content-area">
     <div class="container">
       <section class="section">
-        <h1>Selected Projects</h1>
+        <h2>Selected Projects</h2>
         <div class="project">
           <h3>Chakma ↔ Bangla Dictionary App</h3>
           <p>Desktop JavaFX app with MySQL backend, search and CRUD features.</p>
@@ -41,6 +46,26 @@
   <footer class="main-footer">&copy; 2026 Sourab Chakma</footer>
 
   <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+    
+    // Highlight current page in navigation
     document.querySelectorAll('.nav-links a').forEach(link => {
       const href = link.getAttribute('href');
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
