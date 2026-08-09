@@ -2,244 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sourab Chakma - Resume</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <style>
-        .resume-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-        
-        .name-badge {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            display: inline-block;
-            font-weight: 700;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
-            animation: slideIn 0.6s ease;
-        }
-        
-        .resume-header {
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
-            backdrop-filter: blur(10px);
-            padding: 48px !important;
-            border-radius: 16px !important;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.08) !important;
-            border: 1px solid rgba(0, 102, 204, 0.05) !important;
-            margin-bottom: 32px !important;
-            animation: slideIn 0.6s ease;
-        }
-
-        .resume-header img {
-            width: 160px;
-            height: 160px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-            box-shadow: 0 12px 36px rgba(0, 102, 204, 0.25), 0 0 1px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
-        }
-
-        .resume-header > div {
-            flex: 1;
-        }
-
-        .resume-header h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 0 8px 0;
-            color: var(--text);
-            letter-spacing: -0.5px;
-        }
-
-        .native-name {
-            font-size: 1.2rem;
-            color: #666;
-            margin: 4px 0 16px 0;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .degree-title {
-            font-size: 1rem;
-            color: var(--primary);
-            margin: 12px 0 6px 0;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-
-        .institution {
-            font-size: 1.05rem;
-            color: var(--text-light);
-            margin: 0 0 16px 0;
-            font-weight: 700;
-            letter-spacing: 0.2px;
-        }
-
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            font-size: 0.95rem;
-            color: var(--text-light);
-            border-top: 1px solid rgba(0, 102, 204, 0.1);
-            padding-top: 16px;
-        }
-
-        .contact a {
-            color: var(--primary);
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-        }
-
-        .contact a:hover {
-            color: var(--secondary);
-        }
-
-        @media (max-width: 768px) {
-            .resume-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 32px !important;
-            }
-
-            .resume-header h1 {
-                font-size: 2rem;
-            }
-
-            .resume-header img {
-                width: 140px;
-                height: 140px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Sourab Chakma</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const initialTheme = savedTheme || 'dark';
+            document.documentElement.setAttribute('data-theme', initialTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css?v=1.0.1">
+    <script src="assets/theme.js?v=1.0.1" defer></script>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <button class="hamburger-menu" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="resume-container">
-        <div class="name-badge">SOURAB CHAKMA • B.SC(ENGG)</div>
-        <div class="resume-header">
-            <img src="me.jpg" alt="Sourab Chakma">
-            <div>
-                <h1>Sourab Chakma</h1>
-                <p class="native-name">ସୋରାବ୍ ଚକ୍ରମା</p>
-                <p class="degree-title">B.Sc(Engg) in Computer Science and Engineering</p>
-                <p class="institution"><strong>Mawlana Bhashani Science & Technology University</strong></p>
-                <div class="contact">
-                    <a href="mailto:sourabchakma337@gmail.com">sourabchakma337@gmail.com</a>
-                    <span>•</span>
-                    <a href="tel:+8801518429337">+88 015 1842 9337</a>
-                    <span>•</span>
-                    <a href="https://github.com/sourab337" target="_blank">github.com/sourab337</a>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="nav-brand">Sourab Chakma</div>
+                <div class="nav-menu-wrapper">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="publications.html">Research</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="resume.html" class="active">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger-menu" id="hamburger" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="scrollable-content-area">
+            <div class="container">
+                <div class="layout-grid">
+                    <!-- Left Sidebar (Sticky) -->
+                    <aside class="sidebar">
+                        <img src="me.jpg" alt="Sourab Chakma" class="sidebar-profile-img">
+                        <h1 class="sidebar-name">Sourab Chakma</h1>
+                        <div class="sidebar-title">
+                            Research Associate<br>
+                            <strong>Institute of Policy Dynamics</strong>
+                        </div>
+                        
+                        <div class="sidebar-socials">
+                            <a href="https://github.com/sourab337" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sourab-chakma-b78152263/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                            <a href="mailto:sourabchakma337@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        
+                        <div class="sidebar-details">
+                            <div class="sidebar-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Dhaka, Bangladesh</span>
+                            </div>
+                            <div class="sidebar-detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sourabchakma337@gmail.com">sourabchakma337@gmail.com</a>
+                            </div>
+
+                        </div>
+                    </aside>
+
+                    <!-- Right Column Content -->
+                    <div class="content-area">
+                        <section class="academic-section">
+                            <h2>Curriculum Vitae</h2>
+                            <p style="margin-bottom: 24px;">
+                                A summary of my professional experience, academic background, and publications. You can download the print-ready PDF version using the sidebar link.
+                            </p>
+
+                            <!-- Section: Research Experience -->
+                            <div style="margin-bottom: 30px;">
+                                <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 6px; margin-bottom: 16px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--color-primary);">Research Experience</h3>
+                                
+                                <div class="resume-item">
+                                    <div class="resume-item-header">
+                                        <span class="resume-item-title">Research Associate</span>
+                                        <span class="resume-item-date">Jul 2026 – Present</span>
+                                    </div>
+                                    <div class="resume-item-org">Institute of Policy Dynamics, Dhaka, Bangladesh</div>
+                                    <ul class="resume-item-details">
+                                        <li>Investigate computational models and lexical alignment structures for Brahmic minority scripts.</li>
+                                        <li>Design database schemas and compilation pipelines for custom dictionary lexicons.</li>
+                                        <li>Benchmark LLM subword tokenization strategies on complex scripts to define optimal pre-processing boundaries.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Section: Education -->
+                            <div style="margin-bottom: 30px;">
+                                <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 6px; margin-bottom: 16px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--color-primary);">Education</h3>
+                                
+                                <div class="resume-item">
+                                    <div class="resume-item-header">
+                                        <span class="resume-item-title">B.Sc. (Engg.) in Computer Science and Engineering</span>
+                                        <span class="resume-item-date">Expected 2027</span>
+                                    </div>
+                                    <div class="resume-item-org">Mawlana Bhashani Science & Technology University, Bangladesh</div>
+                                    <ul class="resume-item-details">
+                                        <li>Undergraduate focus on algorithms, database management, and computer network systems.</li>
+                                        <li>Developed a bilingual dictionary desktop suite utilizing JavaFX and SQL.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Section: Projects -->
+                            <div style="margin-bottom: 30px;">
+                                <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 6px; margin-bottom: 16px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--color-primary);">Selected Software & Research Projects</h3>
+                                
+                                <div class="resume-item">
+                                    <div class="resume-item-header">
+                                        <span class="resume-item-title">Chakma ↔ Bangla Dictionary App</span>
+                                        <span class="resume-item-date">JavaFX, MySQL</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin-top: 4px; color: var(--text-secondary);">
+                                        Designed and developed a desktop search suite for cross-lingual lookup. Implemented quick-index SQL database queries for dataset indexing and modification actions.
+                                    </p>
+                                </div>
+                                
+                                <div class="resume-item">
+                                    <div class="resume-item-header">
+                                        <span class="resume-item-title">Academic Portfolio Website</span>
+                                        <span class="resume-item-date">HTML5, CSS3, JS</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; margin-top: 4px; color: var(--text-secondary);">
+                                        Created a sleek and responsive personal homepage adhering to academic templates. Handled dynamic layout configurations and localStorage theme settings.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Section: Skills Summary -->
+                            <div>
+                                <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 6px; margin-bottom: 16px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--color-primary);">Technical Skills Summary</h3>
+                                <ul style="list-style-type: none; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+                                    <li style="margin-bottom: 6px;"><strong style="color: var(--text-primary);">AI & NLP:</strong> Low-Resource NLP, LLMs, Computational Linguistics, PyTorch, TensorFlow, Hugging Face, Scikit-Learn.</li>
+                                    <li style="margin-bottom: 6px;"><strong style="color: var(--text-primary);">Languages:</strong> Python, C, Java, SQL, MATLAB, JavaScript, HTML5/CSS3.</li>
+                                    <li style="margin-bottom: 6px;"><strong style="color: var(--text-primary);">Tools:</strong> Git & GitHub, VS Code, LaTeX (Overleaf), Google Colab, Linux.</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
 
-    <!-- Summary -->
-    <div class="section">
-        <h2>Summary</h2>
-        <p>
-            I'm Sourab Chakma, an undergraduate student in computer science and engineering at Mawlana Bhasani Science and Technology University. My research area is interdisciplinary AI, low-resource language technology, NLP, and networking. Using technology to solve real-life problems is my passion. 
-        </p>
-        <p>
-            Along with my academic studies, I have always wanted to contribute to the growth of my community. I am deeply passionate about working in education, culture, language, etc.
-        </p>
-        <p>
-            As a CS student, I am deeply interested in higher studies.
-        </p>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Sourab Chakma. All rights reserved.</p>
+                <div class="footer-icons">
+                    <a href="https://github.com/sourab337" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sourab-chakma-b78152263/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="mailto:sourabchakma337@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- Education -->
-    <div class="section">
-        <h2>Education</h2>
-        <ul>
-            <li>B.Sc. in Computer Science, Mawlana Bhasani Science and Technology University</li>
-        </ul>
-    </div>
-
-    <!-- Skills -->
-    <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Flutter</span>
-            <span>Java</span>
-            <span>MySQL</span>
-        </div>
-    </div>
-
-    <!-- Projects / Experience -->
-    <div class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <span class="project-title">Chakma ↔ Bangla Dictionary App (JavaFX, MySQL)</span> - Developed a bilingual dictionary with search and CRUD functionality.
-            </li>
-            <li>
-                <span class="project-title">Personal Website (HTML, CSS, JS)</span> - Created a personal portfolio website to showcase projects and resume.
-            </li>
-        </ul>
-    </div>
-    </div>
-
-    <script>
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
-            
-            // Close menu when a link is clicked
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-            });
-        }
-        
-        // Highlight current page in navigation
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            const href = link.getAttribute('href');
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            if (href === currentPage || (href === 'index.html' && currentPage === '')) {
-                link.classList.add('active');
-            }
-        });
-    </script>
-
 </body>
 </html>

@@ -1,73 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Education — Sourab Chakma</title>
-  <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education — Sourab Chakma</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const initialTheme = savedTheme || 'dark';
+            document.documentElement.setAttribute('data-theme', initialTheme);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css?v=1.0.1">
+    <script src="assets/theme.js?v=1.0.1" defer></script>
 </head>
 <body>
-  <header class="main-header">
-    <nav class="navbar">
-      <button class="hamburger-menu" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="nav-brand">Sourab Chakma</div>
+                <div class="nav-menu-wrapper">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="publications.html">Research</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="Skills.html">Skills</a></li>
+                        <li><a href="education.html" class="active">Education</a></li>
+                        <li><a href="resume.html">CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger-menu" id="hamburger" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
 
-  <main class="scrollable-content-area">
-    <div class="container">
-      <section class="section">
-        <h2>Education</h2>
-        <div class="two-col">
-          <div>
-            <h3>B.Sc. in Computer Science</h3>
-            <p style="font-size: 1.05rem; font-weight: 700;"><strong>Mawlana Bhashani Science & Technology University</strong></p>
-            <p>Relevant coursework: Algorithms, NLP, Machine Learning, Databases</p>
-          </div>
-        </div>
-      </section>
+        <main class="scrollable-content-area">
+            <div class="container">
+                <div class="layout-grid">
+                    <!-- Left Sidebar (Sticky) -->
+                    <aside class="sidebar">
+                        <img src="me.jpg" alt="Sourab Chakma" class="sidebar-profile-img">
+                        <h1 class="sidebar-name">Sourab Chakma</h1>
+                        <div class="sidebar-title">
+                            Research Associate<br>
+                            <strong>Institute of Policy Dynamics</strong>
+                        </div>
+                        
+                        <div class="sidebar-socials">
+                            <a href="https://github.com/sourab337" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sourab-chakma-b78152263/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+                            <a href="mailto:sourabchakma337@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        
+                        <div class="sidebar-details">
+                            <div class="sidebar-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Dhaka, Bangladesh</span>
+                            </div>
+                            <div class="sidebar-detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:sourabchakma337@gmail.com">sourabchakma337@gmail.com</a>
+                            </div>
+
+                        </div>
+                    </aside>
+
+                    <!-- Right Column Content -->
+                    <div class="content-area">
+                        <section class="academic-section">
+                            <h2>Education History</h2>
+                            <p style="margin-bottom: 24px;">
+                                A detailed view of my formal academic qualifications.
+                            </p>
+                            
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">B.Sc. (Engg.) in Computer Science and Engineering</span>
+                                    <span class="resume-item-date">Expected Graduation: 2027</span>
+                                </div>
+                                <div class="resume-item-org">Mawlana Bhashani Science & Technology University</div>
+                                <p style="font-size: 0.95rem; margin-top: 6px; color: var(--text-secondary);">
+                                    My undergraduate studies focused extensively on algorithms, database schemas, and AI fundamentals.
+                                </p>
+                                <ul class="resume-item-details">
+                                    <li>Data Structures & Analysis of Algorithms</li>
+                                    <li>Natural Language Processing (NLP)</li>
+                                    <li>Machine Learning & Deep Learning</li>
+                                    <li>Database Management Systems (DBMS)</li>
+                                    <li>Computer Networks & Communication</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Sourab Chakma. All rights reserved.</p>
+                <div class="footer-icons">
+                    <a href="https://github.com/sourab337" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sourab-chakma-b78152263/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-kaggle"></i></a>
+                    <a href="mailto:sourabchakma337@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
-  </main>
-  <footer class="main-footer">&copy; 2026 Sourab Chakma</footer>
-
-  <script>
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-    
-    // Highlight current page in navigation
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      const href = link.getAttribute('href');
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      if (href === currentPage || (href === 'index.html' && currentPage === '')) {\n        link.classList.add('active');
-      }
-    });
-  </script>
 </body>
 </html>
