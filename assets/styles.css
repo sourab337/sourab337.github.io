@@ -434,7 +434,7 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
     border-bottom: none;
 }
 
-@media (min-width: 861px) {
+@media (min-width: 961px) {
     .grid-container > .card:nth-last-child(-n+2) {
         border-bottom: none;
     }
@@ -625,7 +625,7 @@ textarea.form-control {
 /* ==========================================
    Responsive / Mobile Rules
    ========================================== */
-@media (max-width: 860px) {
+@media (max-width: 960px) {
     html, body {
         font-size: 16px;
     }
@@ -674,16 +674,80 @@ textarea.form-control {
         gap: 28px;
     }
 
+    /* Compact profile so page content starts near the top */
     .sidebar {
         position: relative;
         top: 0;
+        display: grid;
+        grid-template-columns: 88px minmax(0, 1fr);
+        column-gap: 16px;
         border-bottom: 1px solid var(--border-color);
-        padding-bottom: 20px;
+        padding-bottom: 12px;
     }
 
     .sidebar-profile-img {
-        width: 130px;
-        height: 152px;
+        grid-row: 1 / span 2;
+        width: 88px;
+        height: 104px;
+        margin-bottom: 0;
+    }
+
+    .sidebar-name {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-title {
+        font-size: 0.86rem;
+        margin-bottom: 0;
+    }
+
+    .sidebar-role {
+        margin-top: 4px;
+    }
+
+    .sidebar-socials {
+        grid-column: 1 / -1;
+        gap: 0;
+        margin: 8px 0 0 -13px;
+    }
+
+    .sidebar-details {
+        display: none;
+    }
+
+    /* Comfortable touch targets */
+    .sidebar-socials a,
+    .footer-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .footer-icons {
+        gap: 0;
+        margin-left: -13px;
+    }
+
+    .theme-toggle-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hamburger-menu {
+        position: relative;
+    }
+
+    .hamburger-menu::after {
+        content: '';
+        position: absolute;
+        inset: -14px -10px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .grid-container {
