@@ -7,13 +7,13 @@
     <script>
         (function() {
             const savedTheme = localStorage.getItem('portfolio-theme');
-            const initialTheme = savedTheme || 'dark';
+            const initialTheme = savedTheme || 'light';
             document.documentElement.setAttribute('data-theme', initialTheme);
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css?v=1.0.1">
-    <script src="assets/theme.js?v=1.0.1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=2.1.1">
+    <script src="assets/theme.js?v=2.0.0" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -27,7 +27,8 @@
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="Skills.html" class="active">Skills</a></li>
                         <li><a href="education.html">Education</a></li>
-                        <li><a href="resume.html">CV</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -50,8 +51,9 @@
                         <img src="me.jpg" alt="Sourab Chakma" class="sidebar-profile-img">
                         <h1 class="sidebar-name">Sourab Chakma</h1>
                         <div class="sidebar-title">
-                            Research Associate<br>
+                            Research Associate &amp; Team Lead<br>
                             <strong>Institute of Policy Dynamics</strong>
+                            <span class="sidebar-role">Associate Software Engineer<br><strong>Verne Ltd.</strong></span>
                         </div>
                         
                         <div class="sidebar-socials">
@@ -92,11 +94,14 @@
                                     <div class="card-tags">
                                         <span>Low-Resource NLP</span>
                                         <span>LLMs</span>
+                                        <span>LLM Evaluation</span>
                                         <span>Computational Linguistics</span>
                                         <span>PyTorch</span>
                                         <span>TensorFlow</span>
                                         <span>Scikit-Learn</span>
+                                        <span>Keras</span>
                                         <span>Hugging Face</span>
+                                        <span>RAG</span>
                                     </div>
                                 </div>
 
@@ -109,6 +114,7 @@
                                     <div class="card-tags">
                                         <span>Python</span>
                                         <span>C</span>
+                                        <span>C++</span>
                                         <span>Java</span>
                                         <span>SQL</span>
                                         <span>MATLAB</span>
@@ -128,6 +134,7 @@
                                         <span>JavaFX</span>
                                         <span>MySQL</span>
                                         <span>REST APIs</span>
+                                        <span>Firebase</span>
                                         <span>Responsive Design</span>
                                     </div>
                                 </div>
@@ -143,7 +150,37 @@
                                         <span>VS Code</span>
                                         <span>LaTeX (Overleaf)</span>
                                         <span>Google Colab</span>
+                                        <span>Kaggle</span>
                                         <span>Linux</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5: Data & Research -->
+                                <div class="card">
+                                    <h3 class="card-title"><i class="fas fa-database" style="color: var(--color-primary); margin-right: 6px;"></i> Data &amp; Research</h3>
+                                    <p style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-secondary);">
+                                        Data handling and language resource building.
+                                    </p>
+                                    <div class="card-tags">
+                                        <span>NumPy</span>
+                                        <span>Pandas</span>
+                                        <span>Data Analysis</span>
+                                        <span>Data Annotation</span>
+                                        <span>Dataset Curation</span>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6: Languages -->
+                                <div class="card">
+                                    <h3 class="card-title"><i class="fas fa-language" style="color: var(--color-primary); margin-right: 6px;"></i> Languages</h3>
+                                    <p style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-secondary);">
+                                        Languages I speak and work with.
+                                    </p>
+                                    <div class="card-tags">
+                                        <span>Chakma (Native)</span>
+                                        <span>Bengali (Native)</span>
+                                        <span>English (Professional)</span>
+                                        <span>Chinese (Beginner)</span>
                                     </div>
                                 </div>
                             </div>

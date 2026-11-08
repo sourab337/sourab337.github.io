@@ -7,13 +7,13 @@
     <script>
         (function() {
             const savedTheme = localStorage.getItem('portfolio-theme');
-            const initialTheme = savedTheme || 'dark';
+            const initialTheme = savedTheme || 'light';
             document.documentElement.setAttribute('data-theme', initialTheme);
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css?v=1.0.1">
-    <script src="assets/theme.js?v=1.0.1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=2.1.1">
+    <script src="assets/theme.js?v=2.0.0" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -27,7 +27,8 @@
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="Skills.html">Skills</a></li>
                         <li><a href="education.html" class="active">Education</a></li>
-                        <li><a href="resume.html">CV</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -50,8 +51,9 @@
                         <img src="me.jpg" alt="Sourab Chakma" class="sidebar-profile-img">
                         <h1 class="sidebar-name">Sourab Chakma</h1>
                         <div class="sidebar-title">
-                            Research Associate<br>
+                            Research Associate &amp; Team Lead<br>
                             <strong>Institute of Policy Dynamics</strong>
+                            <span class="sidebar-role">Associate Software Engineer<br><strong>Verne Ltd.</strong></span>
                         </div>
                         
                         <div class="sidebar-socials">
@@ -85,9 +87,12 @@
                             <div class="resume-item">
                                 <div class="resume-item-header">
                                     <span class="resume-item-title">B.Sc. (Engg.) in Computer Science and Engineering</span>
-                                    <span class="resume-item-date">Expected Graduation: 2027</span>
+                                    <span class="resume-item-date">2023.01 - 2027.04 (Expected)</span>
                                 </div>
-                                <div class="resume-item-org">Mawlana Bhashani Science & Technology University</div>
+                                <div class="resume-item-org">Mawlana Bhashani Science &amp; Technology University, Tangail, Bangladesh</div>
+                                <p style="font-size: 0.95rem; margin-top: 6px; margin-bottom: 0; color: var(--text-secondary);">
+                                    <strong>Thesis:</strong> Towards Robust Optical Character Recognition for Low-Resource Indigenous Scripts: A Case Study on Chakma
+                                </p>
                                 <p style="font-size: 0.95rem; margin-top: 6px; color: var(--text-secondary);">
                                     My undergraduate studies focused extensively on algorithms, database schemas, and AI fundamentals.
                                 </p>
@@ -98,6 +103,17 @@
                                     <li>Database Management Systems (DBMS)</li>
                                     <li>Computer Networks & Communication</li>
                                 </ul>
+                            </div>
+
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">Higher Secondary Certificate (HSC)</span>
+                                    <span class="resume-item-date">2019 - 2022</span>
+                                </div>
+                                <div class="resume-item-org">Rangamati Government College, Rangamati, Bangladesh</div>
+                                <p style="font-size: 0.95rem; margin-top: 6px; color: var(--text-secondary);">
+                                    <strong>GPA:</strong> 4.92/5.00
+                                </p>
                             </div>
                         </section>
                     </div>

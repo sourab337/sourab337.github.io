@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
 
     // === Dark/Light Theme Switcher ===
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     updateThemeIcon(currentTheme);
 
     const themeToggleBtn = document.getElementById('theme-toggle');

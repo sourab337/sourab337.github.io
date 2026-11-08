@@ -7,13 +7,13 @@
     <script>
         (function() {
             const savedTheme = localStorage.getItem('portfolio-theme');
-            const initialTheme = savedTheme || 'dark';
+            const initialTheme = savedTheme || 'light';
             document.documentElement.setAttribute('data-theme', initialTheme);
         })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css?v=1.0.1">
-    <script src="assets/theme.js?v=1.0.1" defer></script>
+    <link rel="stylesheet" href="assets/styles.css?v=2.1.1">
+    <script src="assets/theme.js?v=2.0.0" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -27,7 +27,8 @@
                         <li><a href="projects.html" class="active">Projects</a></li>
                         <li><a href="Skills.html">Skills</a></li>
                         <li><a href="education.html">Education</a></li>
-                        <li><a href="resume.html">CV</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
@@ -50,8 +51,9 @@
                         <img src="me.jpg" alt="Sourab Chakma" class="sidebar-profile-img">
                         <h1 class="sidebar-name">Sourab Chakma</h1>
                         <div class="sidebar-title">
-                            Research Associate<br>
+                            Research Associate &amp; Team Lead<br>
                             <strong>Institute of Policy Dynamics</strong>
+                            <span class="sidebar-role">Associate Software Engineer<br><strong>Verne Ltd.</strong></span>
                         </div>
                         
                         <div class="sidebar-socials">
@@ -79,11 +81,74 @@
                             <h2>Selected Projects</h2>
 
                             <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">ChakmaMath: Mathematical Reasoning in Low-Resource Languages</div>
+                                <div class="card-subtitle">Ongoing</div>
+                                <p>Developing ChakmaMath, a mathematical reasoning dataset for Chakma, with plans to benchmark the reasoning ability of LLMs in low-resource languages.</p>
+                                <div class="card-tags">
+                                    <span>LLM Evaluation</span>
+                                    <span>Reasoning</span>
+                                    <span>Chakma</span>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Chakma Cultural Value Alignment</div>
+                                <div class="card-subtitle">2026.06 - Present</div>
+                                <p>Investigating how LLMs represent and respond to Chakma cultural values, and contributing to a Chakma cultural-values dataset for evaluating pluralistic value alignment.</p>
+                                <div class="card-tags">
+                                    <span>LLMs</span>
+                                    <span>Value Alignment</span>
+                                    <span>Chakma</span>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Multilingual Sentiment Dataset for Indigenous Languages</div>
+                                <div class="card-subtitle">2026.07 - 2026.08</div>
+                                <p>Curated a sentiment dataset covering Chakma, Mandi, and Tanchangya with aligned Bengali and English translations.</p>
+                                <ul class="resume-item-details" style="margin-top: 12px;">
+                                    <li>Coordinated collection, translation, annotation, and quality control across language communities.</li>
+                                    <li>Evaluated mBERT, XLM-RoBERTa, BanglaBERT, SVM, and Naive Bayes baselines for sentiment classification.</li>
+                                </ul>
+                                <div class="card-tags">
+                                    <span>Sentiment Analysis</span>
+                                    <span>Dataset Curation</span>
+                                    <span>Low-Resource NLP</span>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Chakma OCR: Dataset and Recognition System</div>
+                                <div class="card-subtitle">2025 - Present</div>
+                                <p>A Chakma-script OCR dataset built from real-world and synthetic document images, with annotation and quality-control workflows.</p>
+                                <ul class="resume-item-details" style="margin-top: 12px;">
+                                    <li>Fine-tuned Microsoft's TrOCR on Chakma.</li>
+                                    <li>Developed preprocessing, training, and evaluation pipelines to study OCR under limited labeled data and real-world conditions.</li>
+                                </ul>
+                                <div class="card-tags">
+                                    <span>OCR</span>
+                                    <span>TrOCR</span>
+                                    <span>Chakma</span>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Harano Sur: Endangered Chakma Vocabulary Preservation</div>
+                                <div class="card-subtitle">2026.08 - Present</div>
+                                <p>Documenting endangered Chakma vocabulary with elderly speakers through in-person and online collection, with a mobile-friendly Google Sheets/Apps Script system to record, organize, and review entries.</p>
+                                <div class="card-tags">
+                                    <span>Language Preservation</span>
+                                    <span>Apps Script</span>
+                                    <span>Chakma</span>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
                                 <div class="card-title" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
                                     <i class="fas fa-book-open" style="color: var(--color-primary);"></i>
                                     Chakma OCR Annotation Platform
                                 </div>
-                                <div class="card-subtitle">FastAPI, SQLite, JWT Auth, DBNet, PDF2Image</div>
+                                <div class="card-subtitle">2026.04 - 2026.05 &middot; FastAPI, SQLite, JWT Auth, DBNet, PDF2Image</div>
                                 <p>
                                     Multi-user annotation platform built on top of the Chakma OCR dataset builder pipeline. It supports account-based access, book assignment, per-line annotation, and progress tracking for low-resource Chakma OCR workflows.
                                 </p>
@@ -102,6 +167,18 @@
                                 <p style="margin-top: 16px; margin-bottom: 0;">
                                     <a href="https://github.com/sourab337/chakma-annotation-platform" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                                 </p>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Chakma Dictionary</div>
+                                <div class="card-subtitle">2025.11 - 2025.12 &middot; JavaFX</div>
+                                <p>A JavaFX desktop dictionary application for Chakma word lookup and digital language resource management.</p>
+                            </div>
+
+                            <div class="card" style="margin-top: 20px;">
+                                <div class="card-title">Study Material Hub</div>
+                                <div class="card-subtitle">2026.05 - 2026.08 &middot; Firebase, Firestore</div>
+                                <p>A Firebase-based educational platform with authentication, Firestore, file storage, search, and role-based access control.</p>
                             </div>
                         </section>
                     </div>
