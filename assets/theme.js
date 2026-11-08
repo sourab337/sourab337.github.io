@@ -56,33 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setActiveNavLink();
-
-    // === Dark/Light Theme Switcher ===
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    updateThemeIcon(currentTheme);
-
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const theme = document.documentElement.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('portfolio-theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-    }
-
-    function updateThemeIcon(theme) {
-        const icon = document.querySelector('#theme-toggle i');
-        if (icon) {
-            if (theme === 'dark') {
-                icon.className = 'fas fa-sun';
-                icon.title = 'Switch to Light Mode';
-            } else {
-                icon.className = 'fas fa-moon';
-                icon.title = 'Switch to Dark Mode';
-            }
-        }
-    }
 });

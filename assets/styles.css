@@ -11,36 +11,20 @@
     --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
     --font-ui: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
 
-    /* Light theme (default) */
-    --bg-primary: #fffefa;
-    --bg-secondary: #f6f3ea;
-    --bg-nav: #fffefa;
+    /* Academic palette */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f6f9;
+    --bg-nav: #ffffff;
 
-    --color-primary: #7b1e26;       /* Academic maroon */
-    --color-secondary: #5a5f66;
+    --color-primary: #1f4e8c;       /* Links */
+    --color-heading: #002147;       /* Oxford blue */
+    --color-secondary: #555b64;
 
-    --text-primary: #1c1f24;
-    --text-secondary: #3f444b;
-    --text-muted: #70757d;
+    --text-primary: #1a1a1a;
+    --text-secondary: #333840;
+    --text-muted: #636a73;
 
-    --border-color: #ddd8ca;
-    --nav-hover: rgba(123, 30, 38, 0.07);
-}
-
-html[data-theme="dark"] {
-    --bg-primary: #17191d;
-    --bg-secondary: #202329;
-    --bg-nav: #17191d;
-
-    --color-primary: #e3a6a0;
-    --color-secondary: #a4a9b1;
-
-    --text-primary: #eeeae0;
-    --text-secondary: #c6c5bf;
-    --text-muted: #8d9199;
-
-    --border-color: #363a42;
-    --nav-hover: rgba(227, 166, 160, 0.1);
+    --border-color: #d8dde4;
 }
 
 /* ==========================================
@@ -140,7 +124,7 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--color-heading);
 }
 
 .nav-menu-wrapper {
@@ -165,14 +149,14 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
 }
 
 .nav-links a:hover {
-    color: var(--color-primary);
+    color: var(--color-heading);
     text-decoration: none;
 }
 
 .nav-links a.active {
-    color: var(--color-primary);
+    color: var(--color-heading);
     font-weight: 600;
-    border-bottom-color: var(--color-primary);
+    border-bottom-color: var(--color-heading);
 }
 
 /* Hamburger menu button */
@@ -207,25 +191,6 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Theme Toggle Button */
-.theme-toggle-btn {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.theme-toggle-btn:hover {
-    color: var(--color-primary);
-    background-color: var(--nav-hover);
-}
-
 /* ==========================================
    Left Column: Sticky Sidebar
    ========================================== */
@@ -248,6 +213,7 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
 }
 
 .sidebar-name {
+    color: var(--color-heading);
     font-size: 1.35rem;
     font-weight: 600;
     margin-bottom: 4px;
@@ -338,10 +304,10 @@ h3 { font-size: 1.12rem; margin-bottom: 0.7rem; }
 .academic-section h2 {
     font-size: 1.4rem;
     font-weight: 600;
-    border-bottom: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--color-heading);
     padding-bottom: 6px;
     margin-bottom: 18px;
-    color: var(--text-primary);
+    color: var(--color-heading);
 }
 
 /* News List */
@@ -566,7 +532,7 @@ textarea.form-control {
 }
 
 .btn-submit {
-    background-color: var(--color-primary);
+    background-color: var(--color-heading);
     color: var(--bg-primary);
     border: none;
     padding: 10px 22px;
@@ -728,11 +694,6 @@ textarea.form-control {
     .footer-icons {
         gap: 0;
         margin-left: -13px;
-    }
-
-    .theme-toggle-btn {
-        width: 44px;
-        height: 44px;
     }
 
     .hamburger-menu {
